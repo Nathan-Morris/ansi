@@ -2,6 +2,8 @@
 
 > example
 
+![Capture](https://github.com/Nathan-Morris/ansi/assets/73218530/318904cb-c64c-4e97-bf1d-5f87e26babc0)
+
 ```cpp
 #include "ansi.h"
 
@@ -42,7 +44,30 @@ int main(int argc, char* argv[]) {
 	//
 	//
 
-	vector<rgb_t> rainbow_grad_steps = {
+	const char* grad_string = R"(    
+    .__________________________.
+    | .___________________. |==|
+    | |     Apple ][      | |  |
+    | |                   | |  |
+    | |                   | |  |
+    | |                   | |  |
+    | |                   | |  |
+    | |                   | |  |
+    | | ]                 | | ,|
+    | !___________________! |(c|
+    !_______________________!__!
+    |    ___ -=      ___ -= | ,|
+    | ---[_]---   ---[_]--- |(c|
+
+    !_______________________!__!
+   /                            \
+  /  [][][][][][][][][][][][][]  \
+ /  [][][][][][][][][][][][][][]  \
+(  [][][][][____________][][][][]  )
+ \ ------------------------------ /
+  \______________________________/)";
+
+	vector<rgb_t> grad_steps = {
 		color_t::red,
 		color_t::yellow,
 		color_t::green,
@@ -51,7 +76,11 @@ int main(int argc, char* argv[]) {
 		color_t::white
 	};
 
-	cout << gradient("=========([  Gradient String  ])=========", rainbow_grad_steps) << endl << endl;
+	cout << gradient(grad_string, grad_steps) << endl << endl;
 
+	//
+	//
 }
 ```
+
+
